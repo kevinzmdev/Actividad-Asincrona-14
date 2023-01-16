@@ -1,0 +1,49 @@
+<section class="container my-2 py-5">
+
+  <h1 class="text-center">Registro de Personas</h1>
+  <app-hijo [data_padre]="data"></app-hijo>
+  
+  <form class="container col-md-4">
+
+    <section class="form-group my-2 py-2">
+      <label for="nombre" ><b>Nombre:</b></label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        name="nombre"
+        placeholder="Nombre"
+        [(ngModel)]="nombre"
+      />
+    </section>
+
+    <section class="form-group  my-2 py-2">
+      <label for="dni"><b>DNI</b>:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="dni"
+        name="dni"
+        placeholder="N° de DNI"
+        [(ngModel)]="dni"
+      />
+    </section>
+
+    <section class="form-group  my-2 py-2">
+      <label for="estado"><b>Estado civil</b></label>
+      <select class="form-control" id="estado" name="estado" [(ngModel)]="estado">
+        <option value="">Seleccione una opción</option>
+        <option value="soltero">Soltero</option>
+        <option value="casado">Casado</option>
+        <option value="viudo">Viudo</option>
+        <option value="divorciado">Divorciado</option>
+      </select>
+
+    </section>
+    <section class="form-group py-2">
+      <button class="btn btn-success"
+        (click)="enviar()">Enviar</button>
+
+    </section>
+  </form>
+</section>
